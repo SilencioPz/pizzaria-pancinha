@@ -1,0 +1,22 @@
+{% extends "template.html" %}
+{% block conteudo %}
+    {% include 'navbar.html' %}
+    <table class="table table-striped table-responsive table-bordered">
+        <thead class="thead-default">
+            <tr>
+                <th> Nome da Pizza </th>
+                <th> Sabor </th>
+                <th> Tamanho </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pizza in pizzas %}
+            <tr>
+                <td>{{ pizza.nome }}</td>
+                <td>{{ pizza.sabor }}</td>
+                <td>{{ pizza.tamanho }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
